@@ -3,16 +3,14 @@ package main.SelectionSort;
 public class SelectionSort {
 
     public static void selectionSort(int[] list){
-        int n = list.length - 1;
+        int n = list.length;
 
-        for(int i = 0; i < n;i++){
+        for(int i = 0; i < n-1 ;i++){
             int min_inx = i;
-
             for(int j = i + 1; j < n; j++){
                 if(list[j] < list[min_inx]){
                     min_inx = j;
                 }
-
             }
             int temp = list[i];
             list[i] = list[min_inx];
@@ -27,7 +25,7 @@ public class SelectionSort {
         System.out.println();
     }
     public static void main(String[] args) {
-        int[] arr = {5,1,4,5,2};
+        int[] arr = {5,1,4,8,2};
 
         System.out.print("Original array: ");
         printArray(arr);
