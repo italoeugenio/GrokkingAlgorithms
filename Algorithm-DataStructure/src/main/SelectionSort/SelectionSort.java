@@ -1,39 +1,35 @@
 package main.SelectionSort;
 
+import java.util.Arrays;
+
 public class SelectionSort {
+    public static int findMinIndex(int arr[], int startIndex){
+        int min = arr[startIndex];
+        int minIndex = startIndex;
 
-    public static void selectionSort(int[] list){
-        int n = list.length;
-
-        for(int i = 0; i < n-1 ;i++){
-            int min_inx = i;
-            for(int j = i + 1; j < n; j++){
-                if(list[j] < list[min_inx]){
-                    min_inx = j;
-                }
+        for(int i = startIndex + 1; i < arr.length; i++){
+            if(arr[i] < min){
+                min = arr[i];
+                minIndex = i;
             }
-            int temp = list[i];
-            list[i] = list[min_inx];
-            list[min_inx] = temp;
         }
+        return minIndex;
     }
 
-   public static void printArray(int[] arr){
-        for (int val : arr) {
-            System.out.print(val + " ");
+    public static int[] selectionSort(int[] arr){
+        for(int i = 0; i < arr.length - 1; i++){
+            int minIndex = findMinIndex(arr, i);
+            if(minIndex != i){
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+            }
         }
-        System.out.println();
+        return arr;
     }
+
     public static void main(String[] args) {
-        int[] arr = {5,1,4,8,2};
-
-        System.out.print("Original array: ");
-        printArray(arr);
-
-        selectionSort(arr);
-
-        System.out.print("Sorted array: ");
-        printArray(arr);
-        }
+        int[] arr = {5, 2, 3, 4, 0};
+        System.out.println(Arrays.toString(selectionSort(arr)));
+    }
 }
-
