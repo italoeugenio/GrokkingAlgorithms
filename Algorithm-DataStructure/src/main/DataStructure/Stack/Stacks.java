@@ -6,7 +6,7 @@ public class Stacks {
     //Implement
 
     public static void main(String[] args) {
-        //Using Class
+        //Using Class from collections
         Stack<String> stack = new Stack<>();
 
         stack.push("item 1");

@@ -1,6 +1,8 @@
 package main.Algorithm.BinarySearch;
 
 public class BinarySearch {
+
+    //Interative
     public static Integer binarySearch(int[] list, int key) {
         int low = 0;
         int high = list.length - 1;
@@ -18,6 +20,7 @@ public class BinarySearch {
 
         return null;
     }
+    //Recursion
 
     public static void main(String[] args) {
         int[] myList = {1, 3, 5, 7, 9};
