@@ -1,4 +1,4 @@
-package main.DataStructure.Queue;
+package main.book.DataStructure.Queue;
 
 public class Queues {
 

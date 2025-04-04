@@ -1,4 +1,4 @@
-package main.Algorithm.SortingAlgorithms;
+package main.book.Algorithm.SortingAlgorithms;
 
 public class QuickSort {
    public static int somarArraysRecursao(int[] arr, int tamanho){
