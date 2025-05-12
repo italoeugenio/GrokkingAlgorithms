@@ -1,4 +1,4 @@
-package main.theprimeage.Asearch;
+package main.theprimeage.Asearch.search;
 
 public class BinarySearch {
     public static Integer binarySearch(int[] arr, int key) {

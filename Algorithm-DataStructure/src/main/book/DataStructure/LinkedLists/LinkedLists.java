@@ -3,7 +3,6 @@ package main.book.DataStructure.LinkedLists;
 import java.util.LinkedList;
 
 public class LinkedLists {
-
     class Node {
         int data;
         Node next;

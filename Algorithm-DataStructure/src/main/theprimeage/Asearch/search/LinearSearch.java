@@ -1,4 +1,4 @@
-package main.theprimeage.Asearch;
+package main.theprimeage.Asearch.search;
 
 public class LinearSearch {
     public static Integer findElement(int[] arr, int key){
