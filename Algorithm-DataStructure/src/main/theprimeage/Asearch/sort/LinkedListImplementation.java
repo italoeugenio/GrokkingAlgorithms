@@ -10,6 +10,7 @@ class Node {
     }
 }
 
+
 public class LinkedListImplementation{
     private Node head;
 
