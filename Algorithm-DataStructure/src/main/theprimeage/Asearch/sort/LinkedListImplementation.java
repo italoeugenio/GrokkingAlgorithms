@@ -1,48 +1,49 @@
 package main.theprimeage.Asearch.sort;
 
-class Node {
-    int data;
-    Node next;
+class Node<T> {
+    T data;
+    Node<T> next;
 
-    public Node(int data){
+    public Node(T data) {
         this.data = data;
         this.next = null;
     }
 }
 
+public class LinkedListImplementation<T> {
+    private Node<T> head;
 
-public class LinkedListImplementation{
-    private Node head;
+    public void addToEnd(T data) {
+        Node<T> newNode = new Node<>(data);
 
-    public void addToEnd(int data){
-        Node newNode = new Node(data);
-
-        if(head == null){
+        if (head == null) {
             head = newNode;
         } else {
-            Node current = head;
-            while(current.next != null){
+            Node<T> current = head;
+            while (current.next != null) {
                 current = current.next;
             }
             current.next = newNode;
         }
     }
-    public void addToStart(int data){
-        Node newNode = new Node(data);
+
+    public void addToStart(T data) {
+        Node<T> newNode = new Node<>(data);
         newNode.next = head;
         head = newNode;
     }
-    public void remove(int data){
-        if(head == null) return;
 
-        if(head.data == data){
+    public void remove(T data) {
+        if (head == null) return;
+
+        if (head.data.equals(data)) {
             head = head.next;
             return;
         }
 
-        Node current = head;
-        while(current.next != null){
-            if(current.next.data == data){
+        Node<T> current = head;
+        while (current.next != null) {
+            if (current.next.data.equals(data)) {
                 current.next = current.next.next;
                 return;
             }
@@ -50,19 +51,19 @@ public class LinkedListImplementation{
         }
     }
 
-    public void display(){
-        Node current  = head;
-        while (current != null){
-            System.out.print(current.data + "->");
+    public void display() {
+        Node<T> current = head;
+        while (current != null) {
+            System.out.print(current.data + " -> ");
             current = current.next;
         }
         System.out.println("null");
     }
 
-    public int size(){
+    public int size() {
         int count = 0;
-        Node current = head;
-        while(current != null){
+        Node<T> current = head;
+        while (current != null) {
             count++;
             current = current.next;
         }
@@ -70,7 +71,7 @@ public class LinkedListImplementation{
     }
 
     public static void main(String[] args) {
-        LinkedListImplementation list = new LinkedListImplementation();
+        LinkedListImplementation<Integer> list = new LinkedListImplementation<>();
 
         list.addToEnd(10);
         list.addToEnd(20);
@@ -80,7 +81,6 @@ public class LinkedListImplementation{
         list.remove(20);
         list.display();
 
-        System.out.println(list.size());
+        System.out.println("Size: " + list.size());
     }
 }
-

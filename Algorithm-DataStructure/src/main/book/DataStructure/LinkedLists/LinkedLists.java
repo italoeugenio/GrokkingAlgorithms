@@ -79,7 +79,7 @@ public class LinkedLists {
         System.out.print("Custom Linked List after removing element 20: ");
         customList.printList();
 
-        // Using Java's built-in LinkedList
+        // Using Java's built-in LinkedListStudy
         LinkedList<String> collectionList = new LinkedList<>();
         collectionList.add("Ítalo");
         collectionList.add("Sarah");
@@ -88,6 +88,6 @@ public class LinkedLists {
         collectionList.addFirst("First");
         collectionList.remove(2);
 
-        System.out.println("Java's LinkedList: " + collectionList);
+        System.out.println("Java's LinkedListStudy: " + collectionList);
     }
 }
