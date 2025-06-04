@@ -43,7 +43,7 @@ public class StackImplementation {
     public void display() {
         if (isEmpty()) return;
         StackNode current = head;
-        while (current.next != null) {
+        while (current != null) {
             System.out.println(current.data);
             System.out.println("----");
             current = current.next;
@@ -58,11 +58,7 @@ public class StackImplementation {
         stack.push(3);
         stack.push(2);
         stack.push(1);
-
-
-
-
-
+        
         stack.display();
 
     }
