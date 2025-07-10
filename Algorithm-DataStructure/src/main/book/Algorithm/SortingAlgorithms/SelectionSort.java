@@ -34,7 +34,7 @@ public class SelectionSort {
             for(int j = i + 1;j < arr.length;j++){
                 if(arr[i] > arr[j]){
                     int temp = arr[j];
-                    arr[j] = i;
+                    arr[j] = arr[i];
                     arr[i] = temp;
                 }
             }
