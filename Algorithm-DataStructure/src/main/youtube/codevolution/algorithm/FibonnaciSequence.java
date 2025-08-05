@@ -18,8 +18,7 @@ public class FibonnaciSequence {
         if(n == 3 || n >= 4){list.add(c);}
 
         for(int i = 4; i <= n; i++){
-            int temp = b;
-            a = temp;
+            a = b;
             b = c;
             c = a + b;
             list.add(c);
