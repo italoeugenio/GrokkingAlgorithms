@@ -1,16 +1,15 @@
 package main.theprimeage.Asearch.sort;
 
-class Node<T> {
-    T data;
-    Node<T> next;
-
-    public Node(T data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
 public class LinkedListImplementation<T> {
+    static class Node<T> {
+        T data;
+        Node<T> next;
+
+        public Node(T data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
     private Node<T> head;
 
     public void addToEnd(T data) {

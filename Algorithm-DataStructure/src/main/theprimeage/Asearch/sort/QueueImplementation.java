@@ -1,17 +1,16 @@
 package main.theprimeage.Asearch.sort;
 
-class Qnode {
-    int data;
-    Qnode next;
-
-    public Qnode(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-
 public class QueueImplementation {
+    static class Qnode {
+        int data;
+        Qnode next;
+
+        public Qnode(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
     public int length = 0;
     private Qnode head;
     private Qnode tail;
@@ -39,7 +38,7 @@ public class QueueImplementation {
     }
 
     public void peek() {
-        if(isEmpty()){
+        if (isEmpty()) {
             System.out.println("Is empty");
         } else {
             System.out.println(head.data);

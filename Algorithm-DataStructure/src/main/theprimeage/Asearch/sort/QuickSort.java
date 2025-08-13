@@ -38,5 +38,6 @@ public class QuickSort {
         int[] arr = {10, 2, 1, 5, 7};
         quickSort(arr,0,arr.length - 1);
         System.out.println(Arrays.toString(arr));
+
     }
 }

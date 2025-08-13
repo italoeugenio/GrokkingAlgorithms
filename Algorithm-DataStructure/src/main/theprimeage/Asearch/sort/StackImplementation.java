@@ -1,29 +1,26 @@
 package main.theprimeage.Asearch.sort;
 
-class StackNode {
-    int data;
-    StackNode next;
-
-    public StackNode(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
 public class StackImplementation {
+    static class StackNode {
+        int data;
+        StackNode next;
+
+        public StackNode(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
     private StackNode head;
     private int length = 0;
 
     public void push(int data) {
         StackNode newStack = new StackNode(data);
-        if (head == null) {
-            head = newStack;
-            length++;
-        } else {
+        if (head != null) {
             newStack.next = head;
-            head = newStack;
-            length++;
         }
+        head = newStack;
+        length++;
     }
 
     public void pop() {
@@ -58,7 +55,7 @@ public class StackImplementation {
         stack.push(3);
         stack.push(2);
         stack.push(1);
-        
+
         stack.display();
 
     }
